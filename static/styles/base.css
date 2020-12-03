@@ -2,6 +2,58 @@ p {
   font-family: "Montserrat";
 }
 
-#project-row {
+.project-row {
   height: 17em;
+}
+
+.detail-row {
+  height: 6em;
+}
+
+.project-col {
+  position: relative;
+}
+
+.description {
+  position: absolute;
+  bottom: 0;
+}
+
+.left {
+  display: flex;
+  justify-content: flex-end;
+}
+
+#project-header {
+  background-color: #000000;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#footer {
+  background-color: #000000;
+  color: white;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Project col styling */
+#proj1 {
+  background-color: #fcdc4d;
+}
+#proj2 {
+  background-color: #f24333;
+}
+#proj3 {
+  background-color: #00c49a;
+}
+#proj4 {
+  background-color: #48acf0;
+}
+#proj5 {
+  background-color: #7f3fde;
 }
