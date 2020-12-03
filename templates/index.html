@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>mattkmacd</title>
+    <meta charset="utf-8" />
+    <!--Bootstrap Requirements-->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!--CSS-->
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <link rel="stylesheet" href="{{ url_for('static',filename='styles/base.css') }}" />
+</head>
+
+<body>
+    <div class="container" id="header">
+        <div class="row">
+            <div class="col-6">
+                <h1>Matt MacDonald</h1>
+            </div>
+            <div class="col-2">
+                <p>About</p>
+            </div>
+            <div class="col-2">
+                <p>LinkedIn</p>
+            </div>
+            <div class="col-2">
+                <p>GitHub</p>
+            </div>
+        </div>
+    </div>
+    <!--Body here!-->
+    <div class="container-fluid">
+        <div class="row" id="project-row">
+            <div class="col" style="background-color:#00C49A">
+                <p>Projects</p>
+            </div>
+        </div>
+        <div class="row" id="project-row">
+            <div class="col-5" style="background-color:#FCDC4D">
+                <p>Project 1</p>
+            </div>
+            <div class="col-7"></div>
+        </div>
+        <div class="row" id="project-row">
+            <div class="col-7"></div>
+            <div class="col-5" style="background-color:#F24333">
+                <p>Project 2</p>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid" id="footer">
+        <p>Matt MacDonald</p>
+        <p>mattkmacd@gmail.com</p>
+    </div>
+</body>
+
+</html>
