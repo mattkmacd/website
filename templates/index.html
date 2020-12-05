@@ -21,25 +21,31 @@
 <body>
     <div class="container">
         <div class="row detail-row" id="header">
-            <div class="col-6">
-                <h1>Matt MacDonald</h1>
+            <div class="col-6 link-col d-flex justify-content-center">
+                <a class="link" id="link-home" href="/">Matt MacDonald</a>
             </div>
-            <div class="col-2">
-                <p>About</p>
+            <div class="col-3 link-col d-flex justify-content-center">
+                <a class="link" href="https://www.linkedin.com/in/matt-macdonald-7b9293151/">LinkedIn</a>
             </div>
-            <div class="col-2">
-                <p>LinkedIn</p>
-            </div>
-            <div class="col-2">
-                <p>GitHub</p>
+            <div class="col-3 link-col d-flex justify-content-center">
+                <a class="link" href="https://github.com/mattkmacd">GitHub</a>
             </div>
         </div>
     </div>
     <!--Body here!-->
     <div class="container-fluid">
-        <div class="row detail-row">
-            <div class="col" id="projects-header">
-                <h2 id="header-title">Projects</h2>
+        <div class="row project-row">
+            <div class="col-7 project-img">
+                <img id="about-img" src="{{url_for('static', filename='matt.jpg')}}" />
+            </div>
+            <div class="col-5 project-col right" id="about">
+                <div class="title project-header about-text">
+                    <h2>Hi, I'm Matt</h2>
+                </div>
+                <div class="description project-text about-text">
+                    <p>I'm a senior computer engineering major at UT Austin looking to start my career in SWE. Check out
+                        my projects below.</p>
+                </div>
             </div>
         </div>
         <div class="row project-row">
@@ -109,10 +115,9 @@
         </div>
     </div>
     <div class=" container-fluid">
-        <div class="row detail-row">
-            <div class="col" id="footer">
-                <p>Matt MacDonald</p>
-                <p>mattkmacd@gmail.com</p>
+        <div class="row footer-row">
+            <div class="col text-center" id="footer">
+                <p>Matt MacDonald - mattkmacd@gmail.com</p>
             </div>
         </div>
     </div>

@@ -13,6 +13,10 @@ p {
   height: 6em;
 }
 
+.footer-row {
+  height: 4em;
+}
+
 .project-col {
   position: relative;
 }
@@ -63,28 +67,45 @@ p {
   overflow: hidden;
 }
 
-#projects-header {
-  background-color: #000000;
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.link-col {
+  position: relative;
 }
 
-#header-title {
-  font-size: 3.7em;
+.link {
+  font-size: 2em;
+  position: absolute;
+  bottom: 0;
+  color: #000000;
+  transition: 0.3s;
+}
+
+.link:hover {
+  color: #f24333;
+  text-decoration: none;
+}
+
+.about-text {
+  color: #ffffff;
 }
 
 #footer {
   background-color: #000000;
   color: white;
-  flex-direction: column;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  height: 4em;
+  padding-top: 1.2em;
+}
+
+#link-home {
+  font-size: 3.7em;
 }
 
 /* Project  styling */
+#about {
+  background-color: #000000;
+}
+#about-img {
+  height: 17em;
+}
 #proj1 {
   background-color: #fcdc4d;
 }
