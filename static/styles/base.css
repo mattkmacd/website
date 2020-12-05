@@ -1,3 +1,6 @@
+h1,
+h2,
+h3,
 p {
   font-family: "Montserrat";
 }
@@ -20,16 +23,56 @@ p {
 }
 
 .left {
-  display: flex;
-  justify-content: flex-end;
+  padding-left: 21%;
+  padding-right: 2em;
 }
 
-#project-header {
+.right {
+  padding-left: 2em;
+}
+
+.project-text {
+  max-width: 50%;
+  font-size: 1.2em;
+  padding-bottom: 1em;
+
+  display: block;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  overflow: hidden;
+  max-height: 6em;
+}
+
+.project-header {
+  font-size: 2em;
+  padding-top: 1em;
+
+  display: block;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  overflow: hidden;
+  max-height: 3.5em;
+}
+
+.project-img {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.container-fluid {
+  overflow: hidden;
+}
+
+#projects-header {
   background-color: #000000;
   color: white;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+#header-title {
+  font-size: 3.7em;
 }
 
 #footer {
@@ -41,19 +84,34 @@ p {
   align-items: center;
 }
 
-/* Project col styling */
+/* Project  styling */
 #proj1 {
   background-color: #fcdc4d;
+}
+#proj1-img {
+  height: 17em;
 }
 #proj2 {
   background-color: #f24333;
 }
+#proj2-img {
+  height: 17em;
+}
 #proj3 {
   background-color: #00c49a;
+}
+#proj3-img {
+  height: 17em;
 }
 #proj4 {
   background-color: #48acf0;
 }
+#proj4-img {
+  height: 17em;
+}
 #proj5 {
   background-color: #7f3fde;
+}
+#proj5-img {
+  height: 17em;
 }

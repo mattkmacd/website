@@ -38,64 +38,73 @@
     <!--Body here!-->
     <div class="container-fluid">
         <div class="row detail-row">
-            <div class="col" id="project-header">
-                <h2>Projects</h2>
+            <div class="col" id="projects-header">
+                <h2 id="header-title">Projects</h2>
             </div>
         </div>
         <div class="row project-row">
             <div class="col-5 project-col left" id="proj1">
-                <div class="title">
+                <div class="title project-header">
                     <h2>American P.I.E.</h2>
                 </div>
-                <div class="description">
+                <div class="description project-text">
                     <p>American political data aggregator for politicians, bills, and statements.</p>
                 </div>
             </div>
-            <div class="col-7"></div>
+            <div class="col-7 project-img">
+                <img id="proj1-img" src="{{url_for('static', filename='americanpie.jpg')}}" />
+            </div>
         </div>
         <div class="row project-row">
-            <div class="col-7"></div>
-            <div class="col-5 project-col" id="proj2">
-                <div class="title">
+            <div class="col-7 project-img">
+                <img id="proj2-img" src="{{url_for('static', filename='convergent_4x.png')}}" />
+            </div>
+            <div class="col-5 project-col right" id="proj2">
+                <div class="title project-header">
                     <h2>Data Analysis Build Team</h2>
                 </div>
-                <div class="description">
+                <div class="description project-text">
                     <p>Course teaching university students to build data analysis projects from the ground up.</p>
                 </div>
             </div>
         </div>
         <div class="row project-row">
             <div class="col-5 project-col left" id="proj3">
-                <div class="title">
+                <div class="title project-header">
                     <h2>Money(Basket)Ball</h2>
                 </div>
-                <div class="description">
+                <div class="description project-text">
                     <p>Data science project to predict the winner of any given NBA game with ~70% accuracy.</p>
                 </div>
             </div>
-            <div class="col-7"></div>
+            <div class="col-7 project-img">
+                <img id="proj3-img" src="{{url_for('static', filename='basketball_2x.jpg')}}" />
+            </div>
         </div>
         <div class="row project-row">
-            <div class="col-7"></div>
-            <div class="col-5 project-col" id="proj4">
-                <div class="title">
+            <div class="col-7 project-img">
+                <img id="proj4-img" src="{{url_for('static', filename='table.jpg')}}" />
+            </div>
+            <div class="col-5 project-col right" id="proj4">
+                <div class="title project-header">
                     <h2>Happy Hours</h2>
                 </div>
-                <div class="description">
-                    <p>Algorithm that calculates optimal discounts to drive restaurant business.</p>
+                <div class="description project-text">
+                    <p>Algorithm that calculates optimal discounts to drive restaurant business during off hours.</p>
                 </div>
             </div>
         </div>
         <div class="row project-row">
             <div class="col-5 project-col left" id="proj5">
-                <div class="title">
-                    <h2>Senior Design Project (WIP)</h2>
+                <div class="title project-header">
+                    <h2>Senior Design Project</h2>
                 </div>
-                <div class="description">
+                <div class="description project-text">
                     <p>Machine learning model to detect differences between product images.</p>
                 </div>
             </div>
-            <div class="col-7">
+            <div class="col-7 project-img">
+                <img id="proj5-img" src="{{url_for('static', filename='boundingbox_2x.png')}}" />
             </div>
         </div>
     </div>
