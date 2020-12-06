@@ -34,85 +34,99 @@
     </div>
     <!--Body here!-->
     <div class="container-fluid">
-        <div class="row project-row">
-            <div class="col-7 project-img">
-                <img id="about-img" src="{{url_for('static', filename='matt.jpg')}}" />
-            </div>
-            <div class="col-5 project-col right" id="about">
-                <div class="title project-header about-text">
-                    <h2>Hi, I'm Matt</h2>
+        <a class="project-link" href="/about">
+            <div class="row project-row">
+                <div class="col-7 project-img">
+                    <img id="about-img" src="{{url_for('static', filename='matt.jpg')}}" />
                 </div>
-                <div class="description project-text about-text">
-                    <p>I'm a senior computer engineering major at UT Austin looking to start my career in SWE. Check out
-                        my projects below.</p>
-                </div>
-            </div>
-        </div>
-        <div class="row project-row">
-            <div class="col-5 project-col left" id="proj1">
-                <div class="title project-header">
-                    <h2>American P.I.E.</h2>
-                </div>
-                <div class="description project-text">
-                    <p>American political data aggregator for politicians, bills, and statements.</p>
+                <div class="col-5 project-col right" id="about">
+                    <div class="title project-header about-text">
+                        <h2>Hi, I'm Matt</h2>
+                    </div>
+                    <div class="description project-text about-text">
+                        <p>I'm a senior computer engineering major at UT Austin looking to start my career in SWE. Check
+                            out
+                            my projects below.</p>
+                    </div>
                 </div>
             </div>
-            <div class="col-7 project-img">
-                <img id="proj1-img" src="{{url_for('static', filename='americanpie.jpg')}}" />
-            </div>
-        </div>
-        <div class="row project-row">
-            <div class="col-7 project-img">
-                <img id="proj2-img" src="{{url_for('static', filename='convergent_4x.png')}}" />
-            </div>
-            <div class="col-5 project-col right" id="proj2">
-                <div class="title project-header">
-                    <h2>Data Analysis Build Team</h2>
+        </a>
+        <a class="project-link" href="/americanpie">
+            <div class="row project-row">
+                <div class="col-5 project-col left" id="proj1">
+                    <div class="title project-header">
+                        <h2>American P.I.E.</h2>
+                    </div>
+                    <div class="description project-text">
+                        <p>American political data aggregator for politicians, bills, and statements.</p>
+                    </div>
                 </div>
-                <div class="description project-text">
-                    <p>Course teaching university students to build data analysis projects from the ground up.</p>
-                </div>
-            </div>
-        </div>
-        <div class="row project-row">
-            <div class="col-5 project-col left" id="proj3">
-                <div class="title project-header">
-                    <h2>Money(Basket)Ball</h2>
-                </div>
-                <div class="description project-text">
-                    <p>Data science project to predict the winner of any given NBA game with ~70% accuracy.</p>
+                <div class="col-7 project-img">
+                    <img id="proj1-img" src="{{url_for('static', filename='americanpie.jpg')}}" />
                 </div>
             </div>
-            <div class="col-7 project-img">
-                <img id="proj3-img" src="{{url_for('static', filename='basketball_2x.jpg')}}" />
-            </div>
-        </div>
-        <div class="row project-row">
-            <div class="col-7 project-img">
-                <img id="proj4-img" src="{{url_for('static', filename='table.jpg')}}" />
-            </div>
-            <div class="col-5 project-col right" id="proj4">
-                <div class="title project-header">
-                    <h2>Happy Hours</h2>
+        </a>
+        <a class="project-link" href="/data">
+            <div class="row project-row">
+                <div class="col-7 project-img">
+                    <img id="proj2-img" src="{{url_for('static', filename='convergent_4x.png')}}" />
                 </div>
-                <div class="description project-text">
-                    <p>Algorithm that calculates optimal discounts to drive restaurant business during off hours.</p>
-                </div>
-            </div>
-        </div>
-        <div class="row project-row">
-            <div class="col-5 project-col left" id="proj5">
-                <div class="title project-header">
-                    <h2>Senior Design Project</h2>
-                </div>
-                <div class="description project-text">
-                    <p>Machine learning model to detect differences between product images.</p>
+                <div class="col-5 project-col right" id="proj2">
+                    <div class="title project-header">
+                        <h2>Data Analysis Build Team</h2>
+                    </div>
+                    <div class="description project-text">
+                        <p>Course teaching university students to build data analysis projects from the ground up.</p>
+                    </div>
                 </div>
             </div>
-            <div class="col-7 project-img">
-                <img id="proj5-img" src="{{url_for('static', filename='boundingbox_2x.png')}}" />
+        </a>
+        <a class="project-link" href="/moneybb">
+            <div class="row project-row">
+                <div class="col-5 project-col left" id="proj3">
+                    <div class="title project-header">
+                        <h2>Money(Basket)Ball</h2>
+                    </div>
+                    <div class="description project-text">
+                        <p>Data science project to predict the winner of any given NBA game with ~70% accuracy.</p>
+                    </div>
+                </div>
+                <div class="col-7 project-img">
+                    <img id="proj3-img" src="{{url_for('static', filename='basketball_2x.jpg')}}" />
+                </div>
             </div>
-        </div>
+        </a>
+        <a class="project-link" href="/happyhours">
+            <div class="row project-row">
+                <div class="col-7 project-img">
+                    <img id="proj4-img" src="{{url_for('static', filename='table.jpg')}}" />
+                </div>
+                <div class="col-5 project-col right" id="proj4">
+                    <div class="title project-header">
+                        <h2>Happy Hours</h2>
+                    </div>
+                    <div class="description project-text">
+                        <p>Algorithm that calculates optimal discounts to drive restaurant business during off hours.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </a>
+        <a class="project-link" href="/seniordesign">
+            <div class="row project-row">
+                <div class="col-5 project-col left" id="proj5">
+                    <div class="title project-header">
+                        <h2>Senior Design Project</h2>
+                    </div>
+                    <div class="description project-text">
+                        <p>Machine learning model to detect differences between product images.</p>
+                    </div>
+                </div>
+                <div class="col-7 project-img">
+                    <img id="proj5-img" src="{{url_for('static', filename='boundingbox_2x.png')}}" />
+                </div>
+            </div>
+        </a>
     </div>
     <div class=" container-fluid">
         <div class="row footer-row">

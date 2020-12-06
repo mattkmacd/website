@@ -84,6 +84,10 @@ p {
   text-decoration: none;
 }
 
+.project-link:hover {
+  text-decoration: none;
+}
+
 .about-text {
   color: #ffffff;
 }
@@ -108,30 +112,35 @@ p {
 }
 #proj1 {
   background-color: #fcdc4d;
+  color: #000000;
 }
 #proj1-img {
   height: 17em;
 }
 #proj2 {
   background-color: #f24333;
+  color: #000000;
 }
 #proj2-img {
   height: 17em;
 }
 #proj3 {
   background-color: #00c49a;
+  color: #000000;
 }
 #proj3-img {
   height: 17em;
 }
 #proj4 {
   background-color: #48acf0;
+  color: #000000;
 }
 #proj4-img {
   height: 17em;
 }
 #proj5 {
   background-color: #7f3fde;
+  color: #000000;
 }
 #proj5-img {
   height: 17em;
