@@ -1,10 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head></head>
+<head>
+    <title>Happy Hours</title>
+    <meta charset="utf-8" />
+    <!--Bootstrap Requirements-->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
 
-<body>
-    <p>Happy Hours</p>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!--CSS-->
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <link rel="stylesheet" href="{{ url_for('static',filename='styles/base.css') }}" />
+</head>
+
+<body style="background-color: #48acf0">
+    <!--Header-->
+    <div class="container">
+        <div class="row detail-row white-row">
+            <div class="col-6 link-col d-flex justify-content-center">
+                <a class="link" id="link-home" href="/">Matt MacDonald</a>
+            </div>
+            <div class="col-3 link-col d-flex justify-content-center">
+                <a class="link" href="https://www.linkedin.com/in/matt-macdonald-7b9293151/">LinkedIn</a>
+            </div>
+            <div class="col-3 link-col d-flex justify-content-center">
+                <a class="link" href="https://github.com/mattkmacd">GitHub</a>
+            </div>
+        </div>
+    </div>
+    <!--Body-->
+    <div class="container">
+        <div class="row writeup-body">
+            <div class="col">
+                <h4>Happy Hours</h4>
+                <p>
+                    During my Fall 2019 semester, I was a member on Texas Convergent’s Data Analysis build team. This
+                    was my first experience building a data science project and really started my interest in that
+                    field. My subteam’s goal was to build a data product that could improve the restaurant industry. The
+                    problem we chose to focus on was that empty tables don’t make money. That is, when restaurants have
+                    open seating, they are missing out on potential profit. Our solution was to build Happy Hours.
+                </p>
+                <p>
+                    Happy Hours is a model that recommends restaurant discounts based on popularity and sales data.
+                    Throughout the day, any restaurant has “on” hours and “off” hours in terms of getting customers. The
+                    goal of the Happy Hours discounts is to drive up business during those off hours. If the gap between
+                    the on and off hours can be narrowed, restaurants can generate profit during times where they
+                    usually don’t get business.
+                </p>
+                <p>
+                    Once we finalized the scope and idea behind our project, one of my first responsibilities was to
+                    analyze restaurant’s sales data. This would give us some idea into how big the gap between on and
+                    off hours really was. Using restaurant takeout sales data taken from Kaggle, I charted the number of
+                    sales respective to day of the week and time of day. Every sales dataset I processed in this way
+                    showed us a massive disparity between on and off hours.
+                </p>
+                <img class="writeup-img" src="{{url_for('static', filename='happyhoursgraph.png')}}">
+                <p>
+                    With the premise of our project confirmed, we began creating a model to determine which discounts
+                    could effectively drive business during off hours. One model my team considered was the price
+                    elasticity of demand. This formula states a 1% drop in price can lead to a 2.3% increase in
+                    business. While this formula could be a good starting place, I wanted to compare how discounts work
+                    in practice. Using Google Maps popularity data from several restaurants that regularly offer
+                    discounts, I charted how business is affected during these times. While many factors play into
+                    restaurant sales, the graphs showed the restaurants with consistent discounts had a smaller
+                    difference between a restaurant’s peak and average popularity.
+                </p>
+                <p>
+                    From there, our project utilized the price elasticity of demand across a restaurant’s sales data to
+                    recommend discounts. By the end of the semester, we delivered a prototype of Happy Hours that could
+                    recommend effective discounts based on historical and predicted sales. This project really
+                    introduced me to data science and especially how to operate on datasets in Python. I learned a lot
+                    in this course, and it encouraged me to eventually take on the role of Data Analysis technical lead
+                    in Convergent.
+                </p>
+                <img class="writeup-img" src="{{url_for('static', filename='happyhoursdata.png')}}">
+            </div>
+        </div>
+    </div>
+    <!--Footer-->
+    <div class="container">
+        <div class="row writeup-footer white-row">
+            <div class="col-6 link-col d-flex justify-content-start">
+                <a class="link" href="/moneybb">Money(Basket)Ball</a>
+            </div>
+            <div class="col-6 link-col d-flex justify-content-end">
+                <a class="link" href="/seniordesign">Senior Design</a>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>

@@ -1,10 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head></head>
+<head>
+    <title>Senior Design</title>
+    <meta charset="utf-8" />
+    <!--Bootstrap Requirements-->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
 
-<body>
-    <p>Senior Design Project</p>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!--CSS-->
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <link rel="stylesheet" href="{{ url_for('static',filename='styles/base.css') }}" />
+</head>
+
+<body style="background-color: #7f3fde">
+    <!--Header-->
+    <div class="container">
+        <div class="row detail-row white-row">
+            <div class="col-6 link-col d-flex justify-content-center">
+                <a class="link" id="link-home" href="/">Matt MacDonald</a>
+            </div>
+            <div class="col-3 link-col d-flex justify-content-center">
+                <a class="link" href="https://www.linkedin.com/in/matt-macdonald-7b9293151/">LinkedIn</a>
+            </div>
+            <div class="col-3 link-col d-flex justify-content-center">
+                <a class="link" href="https://github.com/mattkmacd">GitHub</a>
+            </div>
+        </div>
+    </div>
+    <!--Body-->
+    <div class="container">
+        <div class="row writeup-body">
+            <div class="col">
+                <h4>Senior Design</h4>
+                <p>
+                    There are an immense number of products sold on Amazon, and they have a correspondingly immense
+                    amount of images. Given the large size of Amazon’s catalogue, there are many products that look very
+                    similar, but contain small yet important differences. These differences are typically only found
+                    upon manual further inspection. This leads to my senior design project’s problem statement— given
+                    two product images, what is the likelihood they represent the same product? More specifically, the
+                    project goal is to identify and create a bounding box that indicates the areas of differences
+                    between two similar product images in an unsupervised fashion. An example is shown below.
+                </p>
+                <img class="writeup-img" src="{{url_for('static', filename='seniordesign.png')}}">
+                <p>
+                    In this project, my senior design team aims to train a deep neural net based machine learning model
+                    to understand these images and solve the difference detection problem. The model should be able to
+                    answer the question: How precisely can we label the differences between two images? Furthermore,
+                    this problem requires a model that can account for these trivial differences in the images and
+                    accurately identify larger level differences in the product itself. The key objective is to learn a
+                    feed-forward network that can embed product images and, subsequently, use and fine tune these
+                    embeddings for the task at hand. This project consists of selecting and training existing neural
+                    architectures for images using a mix of unsupervised and supervised learning. Moderate-scale
+                    datasets provided by Amazon Research will be manipulated to reach project objectives.
+                </p>
+                <h4>Design Concept</h4>
+                <p>The goal of this project’s design is to detect any differences between images and communicate those
+                    results. To achieve this end, the design of our project is broken down into four fundamental
+                    subsystems as seen in the diagram below:
+                </p>
+                <img class="writeup-img" src="{{url_for('static', filename='designconcept.png')}}">
+                <h5>Image Database</h5>
+                <p>
+                    The Image Database represents the Amazon Product Dataset we are pulling images from for our project.
+                    As the dataset is extremely large, it has been preprocessed extensively to remove extraneous
+                    information and make it easier to handle. The preprocessing was performed with a script to remove
+                    unnecessary metadata and duplicate products. The attributes that the preprocessing kept was the
+                    links to images as those are necessary for our project. These images are then sent to Image
+                    Augmentation or directly to the Model.
+                </p>
+                <h5>Image Augmentation</h5>
+                <p>
+                    The Image Augmentation is an optional step in our project that greatly increases the amount of data
+                    we can use to improve the functionality of our project. By running any combination of image
+                    augmentation processes on a dataset, we can produce almost infinite variations to train our model.
+                    The image augmentation processes we have implemented are alignment, lighting, scaling, copy and
+                    paste, saturation, and single/multi channel color. Each of these can be used in conjunction to
+                    create a large variety of hybrid augmented images. Once augmented, the images are sent to the Model.
+                </p>
+                <h5>Faster R-CNN Model</h5>
+                <p>
+                    The Model represents the process we use to detect differences between images. The current goal is to
+                    draw bounding boxes around where these differences occur. This model will be implemented through
+                    Faster R-CNN. The method is as follows: Two RGB 3-channel input images are concatenated into one
+                    6-channel image and fed into a Faster R-CNN detection pipeline. The CNN feature extraction network
+                    is applied, which has convolutional layers and two image data layers are fed into a Concat layer.
+                    The result draws a bounding box around the object difference that was detected. A diagram of this
+                    process is included below:
+                </p>
+                <img class="writeup-img" src="{{url_for('static', filename='architecture.png')}}">
+                <h5>User Interface</h5>
+                <p>
+                    Finally, the User Interface represents how we plan to display the results of the project. This step
+                    takes the results from the Model and presents it to an end user.
+                </p>
+            </div>
+        </div>
+    </div>
+    <!--Footer-->
+    <div class="container">
+        <div class="row writeup-footer white-row">
+            <div class="col-6 link-col d-flex justify-content-start">
+                <a class="link" href="/happyhours">Happy Hours</a>
+            </div>
+            <div class="col-6 link-col d-flex justify-content-end">
+                <a class="link" href="/about">About</a>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>

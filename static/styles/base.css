@@ -1,6 +1,8 @@
 h1,
 h2,
 h3,
+h5,
+h6,
 p {
   font-family: "Montserrat";
 }
@@ -15,6 +17,24 @@ p {
 
 .footer-row {
   height: 4em;
+}
+
+.writeup-footer {
+  height: 3em;
+}
+
+.writeup-body {
+  background-color: #f6f6f6;
+  padding: 1em;
+}
+
+.writeup-img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  height: auto;
+  margin-bottom: 1em;
 }
 
 .project-col {
@@ -84,12 +104,26 @@ p {
   text-decoration: none;
 }
 
+.reverse-link {
+  color: #f24333;
+  transition: 0.3s;
+}
+
+.reverse-link:hover {
+  color: #000000;
+  text-decoration: none;
+}
+
 .project-link:hover {
   text-decoration: none;
 }
 
 .about-text {
   color: #ffffff;
+}
+
+.white-row {
+  background-color: white;
 }
 
 #footer {

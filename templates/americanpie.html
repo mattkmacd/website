@@ -1,10 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head></head>
+<head>
+    <title>American P.I.E.</title>
+    <meta charset="utf-8" />
+    <!--Bootstrap Requirements-->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
 
-<body>
-    <p>American P.I.E.</p>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!--CSS-->
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <link rel="stylesheet" href="{{ url_for('static',filename='styles/base.css') }}" />
+</head>
+
+<body style="background-color: #fcdc4d">
+    <!--Header-->
+    <div class="container">
+        <div class="row detail-row white-row">
+            <div class="col-6 link-col d-flex justify-content-center">
+                <a class="link" id="link-home" href="/">Matt MacDonald</a>
+            </div>
+            <div class="col-3 link-col d-flex justify-content-center">
+                <a class="link" href="https://www.linkedin.com/in/matt-macdonald-7b9293151/">LinkedIn</a>
+            </div>
+            <div class="col-3 link-col d-flex justify-content-center">
+                <a class="link" href="https://github.com/mattkmacd">GitHub</a>
+            </div>
+        </div>
+    </div>
+    <!--Body-->
+    <div class="container">
+        <div class="row writeup-body">
+            <div class="col">
+                <h4>American P.I.E.</h4>
+                <p>
+                    American P.I.E. is a web application that aggregates political data and their interconnections. I
+                    built this project alongside Ryed Ahmed, Rithvik Baddam, and Carlos Villapudua in my Software
+                    Engineering Lab course. Over the Fall 2020 semester, we went from brainstorming, designing,
+                    prototyping, and refactoring to deliver a finished project. Check out American P.I.E. <a
+                        class="reverse-link" href="https://american-pie-292000.uc.r.appspot.com/">here</a>.
+                </p>
+                <p>
+                    The initial goal of this project was to create a web application that collects and displays data
+                    dynamically. All data would be pulled from existing API’s or through web scraping and turned into
+                    viewable instances on the frontend. Our team settled on using political data for our project as it
+                    is not only interesting to us, but putting this information together could reduce the opaqueness of
+                    our political system. At the beginning, we wanted to work with three models: politicians, issues,
+                    and elections. These three models also provided the acronym in our project’s name. However, existing
+                    data sources for issues and elections were lacking, and their interconnections did not provide new
+                    or interesting insights. Thus, we pivoted to a more viable trio of models: politicians, bills, and
+                    statements.
+                </p>
+                <h4>Frontend</h4>
+                <p>
+                    My technical responsibilities for this project were on the frontend. Specifically, I implemented the
+                    about and model pages. The about page is a static webpage that details information on the web
+                    application and our team. On the other hand, the purpose of the model pages is to dynamically
+                    display data instances. To accomplish this goal, the design and functionality of the model pages
+                    evolved over the course of the project. The final implementation can be seen below:
+                </p>
+                <img class="writeup-img" src="{{url_for('static', filename='apgrid.png')}}">
+                <p>
+                    A grid of data instances is dynamically populated from our database onto the page. Each model page
+                    can be filtered or sorted to refine the results a user sees. Initially, these features were
+                    implemented across Javascript files tailored to each model page. By the end of the project, I
+                    refactored these files into a single handler that works for each model page. This heavily cut down
+                    on duplicated code and improved the handler’s adaptability. The new implementation also uses the
+                    Strategy design pattern which allows the handler to execute actions depending on which model was
+                    calling it. The model pages also have functional pagination to improve readability of the results.
+                    Here’s a breakdown of each model:
+                </p>
+                <h5>Politicians</h5>
+                <p>
+                    This model tracks data on US representatives and senators. This includes date of birth, affiliated
+                    party, voting stats, and more. Each politician is associated with at least one bill they sponsored
+                    and a statement directly regarding them. Each politician instance has an image attached as well as
+                    links to their social media accounts. The images were either included in the ProPublica API or
+                    acquired using Google Custom Search.
+                </p>
+                <h5>Bills</h5>
+                <p>
+                    This model tracks data on bills that are proposed in the House of Representatives and Senate. This
+                    data includes the bill title, the sponsor, relevant committees, whether the bill has been passed,
+                    and more. Each bill instance is associated with the other models.
+                </p>
+                <h5>Statements</h5>
+                <p>
+                    This model tracks data on statements made by politicians and other related news stories. This data
+                    includes the date published, type of statement, relevant politician, and more. Each statement
+                    instance is associated with the other models.
+                </p>
+                <h4>Flask</h4>
+                <p>
+                    A large part of this role was building the Flask routes. The project’s frontend was created around
+                    Flask to handle the necessary URL routing. One of the main challenges I encountered here was
+                    querying the correct information from our database and passing it to the model pages. The
+                    implementation I used was to load a subset of the entries in our database into a list based on the
+                    requested page. By passing this list to whatever model page was being rendered, I was able to
+                    dynamically load data instances.
+                </p>
+                <p>
+                    Another main challenge was passing variables between different areas of the web application. In
+                    order to enable pagination, filtering, and sorting I needed to pass those values from the model page
+                    to a Flask route. These features also needed to be usable together in any combination, so the
+                    variables had to remain consistent after a new model page was rendered. I handled this by storing
+                    each necessary variable into the URL. While this made the URL addresses a bit lengthy, it allowed
+                    the pagination/filtering/sorting variables to remain consistent and accessible by the Flask app.
+                </p>
+                <h4>Reflection</h4>
+                <p>
+                    Overall, this project exposed me to new aspects of frontend development and gave me a deeper
+                    understanding of the software engineering process. Working with CSS and Bootstrap to build this
+                    website was extremely interesting and taught me a lot about frontend design. While parts of
+                    Bootstrap were difficult to tailor exactly how I wanted, I am satisfied with how the look of the
+                    website turned out. Building out the features of the website over time was also very rewarding. I
+                    enjoyed seeing the model pages go from static placeholders to dynamic web pages with support for
+                    pagination, filtering, and sorting. One of the main aspects I could have done better was how
+                    variables are passed from the model pages to the Flask app. As I talked about before, the URLs of
+                    the model pages can get quite long and complicated. I would have loved to find another
+                    implementation that could pass and maintain those variables in a more lightweight manner. Lastly, I
+                    greatly enjoyed working with my team over the semester. The project rotated leadership to each of us
+                    through various phases, and each of us collaborated effectively to deliver this finished project.
+                </p>
+            </div>
+        </div>
+    </div>
+    <!--Footer-->
+    <div class="container">
+        <div class="row writeup-footer white-row">
+            <div class="col-6 link-col d-flex justify-content-start">
+                <a class="link" href="/about">About</a>
+            </div>
+            <div class="col-6 link-col d-flex justify-content-end">
+                <a class="link" href="/data">Data Analysis</a>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>
