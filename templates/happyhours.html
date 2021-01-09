@@ -3,6 +3,7 @@
 
 <head>
     <title>Happy Hours</title>
+    <link rel="icon" type="image/png" href="{{url_for('static', filename='myicon.png')}}">
     <meta charset="utf-8" />
     <!--Bootstrap Requirements-->
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -59,7 +60,7 @@
                     sales respective to day of the week and time of day. Every sales dataset I processed in this way
                     showed us a massive disparity between on and off hours.
                 </p>
-                <img class="writeup-img" src="{{url_for('static', filename='happyhoursgraph.png')}}">
+                <img class="writeup-img-unscaled" src="{{url_for('static', filename='happyhoursgraph.png')}}">
                 <p>
                     With the premise of our project confirmed, we began creating a model to determine which discounts
                     could effectively drive business during off hours. One model my team considered was the price

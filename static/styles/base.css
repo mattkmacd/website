@@ -37,6 +37,13 @@ p {
   margin-bottom: 1em;
 }
 
+.writeup-img-unscaled {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1em;
+}
+
 .project-col {
   position: relative;
 }

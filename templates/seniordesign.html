@@ -3,6 +3,7 @@
 
 <head>
     <title>Senior Design</title>
+    <link rel="icon" type="image/png" href="{{url_for('static', filename='myicon.png')}}">
     <meta charset="utf-8" />
     <!--Bootstrap Requirements-->
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -93,11 +94,20 @@
                     The result draws a bounding box around the object difference that was detected. A diagram of this
                     process is included below:
                 </p>
-                <img class="writeup-img" src="{{url_for('static', filename='architecture.png')}}">
+                <img class="writeup-img-unscaled" src="{{url_for('static', filename='architecture.png')}}">
                 <h5>User Interface</h5>
                 <p>
                     Finally, the User Interface represents how we plan to display the results of the project. This step
                     takes the results from the Model and presents it to an end user.
+                </p>
+                <h4>Current Progress</h4>
+                <p>
+                    Since my team started work on this project in the Fall, we have made strong progress in several
+                    areas. The image augmentation processes have been fully implemented, giving us a massive image set
+                    to train our model with. The preprocessing function for the Amazon database is also completed so our
+                    dataset will soon be fully ready to use. Currently, I am focused on building out the Faster R-CNN
+                    model. This system is the highest priority for our team so we can begin training and testing our
+                    project as soon as possible. Watch this page for updates throughout the Spring!
                 </p>
             </div>
         </div>
