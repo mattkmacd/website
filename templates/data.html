@@ -38,7 +38,133 @@
     <div class="container">
         <div class="row writeup-body">
             <div class="col">
-                <p>temp</p>
+                <h4>Data Analysis Technical Build Team Lead</h4>
+                <p>
+                    Over the course of my Fall 2020 semester at UT, I served as a technical build team lead in Texas
+                    Convergent. Convergent is an interdisciplinary coding organization that teaches students to build
+                    their startup ideas from the ground up. The organization is broken up into several build teams with
+                    each focusing on a central theme. My role was on the Data Analysis build team, where data processing
+                    and modeling were core to each project. Throughout the semester, I remotely mentored three student
+                    subteams to ideate, design, and implement data science projects.
+                </p>
+                <h4>Responsibilities</h4>
+                <p>
+                    As a lead, one of my responsibilities was to build out the technical curriculum with lectures and
+                    tutorials. My goal was to ensure students not only understood how to implement data analysis
+                    technically but also why each step is vital. To accomplish this, I prepared several presentations to
+                    cover subjects from obtaining and cleaning data to drawing insights through models and
+                    visualization. I also led code walkthroughs to teach the tools students would need for their
+                    projects. For example, I introduced data preprocessing with a tutorial covering the basics of Python
+                    and the pandas library. This involved operating on an example dataset and processing out
+                    unnecessary, duplicated, or missing information while demonstrating useful pandas functions. The
+                    focus for these tutorials was to provide students with the skeleton of how to implement data
+                    analysis rather than a strict set of steps to follow. After lectures and tutorials, subteams would
+                    break out to work within their groups.
+                </p>
+                <p>
+                    Mentoring the student subteams directly made up the most rewarding and challenging part of my role.
+                    During breakouts, I gave students the specific help they needed for their respective projects. For
+                    the early stages of their projects, I largely gave advice on how they should best design their
+                    projects. Since many students were new to working with data, I focused on getting them to think
+                    about what valuable information a dataset might hold. If a dataset looked remotely related to their
+                    project, I advised they investigate it in detail and see if any of its insights might be useful to
+                    their project. From there it was making myself a resource for the subteams as they started
+                    implementing their designs. Much of this mentoring was done by students coding while sharing their
+                    screens with the team. While it was not the most optimal format, livesharing code did come with some
+                    benefits. For example, every student could see the important areas of the code be written. This
+                    meant that rather than splitting off to work on different areas, each student understood how the
+                    core parts of their project operated. Since these core areas are where most of the data science help
+                    was needed, most students could cement their knowledge of working with data this way. Seeing my
+                    students improve not only their technical ability but also their understanding of data science was
+                    incredibly rewarding. Despite the challenges posed by teaching remotely, I believe my work in the
+                    breakouts ensured students were engaged and learning. Overall, the breakouts allowed me to give
+                    direct technical assistance and teach the right tools the subteams needed for their projects.
+                </p>
+                <h4>Subteam Projects</h4>
+                <p>
+                    At the beginning of the course, students proposed several project ideas that were narrowed down to
+                    three that would be built over the semester. Each student subteam built a business plan and minimum
+                    viable product off of these ideas. Descriptions and links to their presentations are below:
+                </p>
+                <h5><a class="reverse-link"
+                        href="https://docs.google.com/presentation/d/1tMj_oOOqJ5UwkOz47VLm_r_aMLTxYiYI_wBh9HTco0o/edit?usp=sharing">autoClips</a>
+                </h5>
+                <img class="writeup-img-unscaled" src="{{url_for('static', filename='autoClips.png')}}">
+                <p>
+                    This is the subteam I worked the closest with and I am really proud of their progress over the
+                    semester. At first, this team wanted to build an application to determine which basketball games are
+                    worth tuning into. After reviewing what data sources were available and what they could do with that
+                    data, they shifted to building a model that can automatically highlight the best plays of any NFL
+                    game. The basic proposal is that, rather than using the time of editors, producers, and directors to
+                    produce highlight clips, a data-based algorithm could do it unsupervised. By replacing the middlemen
+                    in this process, autoClips cuts down the price required to produce these clips.
+                </p>
+                <p>
+                    The team used an NFL dataset containing information on 390,000 individual plays over 10 seasons to
+                    build their model. This dataset contained information on the type of play, yards gained, penalties,
+                    calculated win percentage, and much more. Because their project needed to highlight the best plays
+                    from a game, they needed a method to calculate how exciting any given play was. The formula they
+                    used was the Game Excitement Index. Essentially, the GEI can be used to calculate how exciting any
+                    given play is by highlighting large win percentage swings normalized for game length. During a live
+                    game, it is not possible to have access to this win percentage data. Therefore, the win percentage
+                    is not considered in the training or testing set. The goal here was to build a machine learning
+                    model that could calculate a GEI for any play based on that play’s data rather than difference in
+                    win percentage. Several machine learning models were tried that produced interesting results, but
+                    I’d like to highlight their Bayesian Ridge Regression model. The graph below is plotted with actual
+                    GEI on the x-axis and predicted GEI on the y-axis.
+                </p>
+                <img class="writeup-img-unscaled" src="{{url_for('static', filename='autoClipsGraph.png')}}">
+                <p>
+                    This Bayesian Ridge Regression model was trained on 377,193 plays and tested on a random game’s 139
+                    plays. As can be seen above, the model is certainly not perfect as many plays deemed “exciting” in
+                    the training set are not predicted as such. One possibility of this accuracy is that the model looks
+                    at each play discreetly and somewhat lacks the ability to read comebacks or turnarounds. However,
+                    the plays this model rates as the most exciting are consistently quite accurate.
+                </p>
+                <p>
+                    Overall, the minimum viable product delivered by this team showed promising results. While there are
+                    some issues that could be smoothed out with a more polished model, the current iteration can
+                    consistently identify especially exciting plays. I also learned a lot by working closely with this
+                    team to help with any design and implementation issues.
+                </p>
+                <h5><a class="reverse-link"
+                        href="https://docs.google.com/presentation/d/1Nb1XOuWEQzCPi24xJIEt8a0Pkk7tdfBUiHY9bZx-MXc/edit?usp=sharing">Moodify</a>
+                </h5>
+                <img class="writeup-img-unscaled" src="{{url_for('static', filename='Moodify.png')}}">
+                <p>
+                    Moodify is a platform that generates Spotify playlists based on mood. Generally, mood playlists
+                    offered by Spotify are pre-curated so they cannot take personal taste into account. If you want to
+                    make a mood playlist with the songs you love, it can take a while to add them all manually. Moodify
+                    streamlines this process by selecting the best-fitting songs from your other playlists to create
+                    mood playlists.
+                </p>
+                <img class="writeup-img-unscaled" src="{{url_for('static', filename='MoodifyData.png')}}">
+                <p>
+                    Moodify’s implementation is based all around audio data. The process breaks songs down into audio
+                    features such as loudness, tempo, and energy. Each song has measurable levels for each audio
+                    feature. From there, the team analyzed which features correspond to certain moods. As can be seen
+                    above, a workout playlist will have high danceability and energy but low acousticness. On the other
+                    hand, a sad playlist will have lower energy but high acousticness instead. Overall, Moodify
+                    leverages audio data to improve the experience of creating mood playlists.
+                </p>
+                <h5><a class="reverse-link"
+                        href="https://docs.google.com/presentation/d/1k4MQanvjTJf-IGPlxYIcKWYMEUQCghAIhuW49b_Dy58/edit?usp=sharing">GenerEAT</a>
+                </h5>
+                <img class="writeup-img-unscaled" src="{{url_for('static', filename='GenerEAT.png')}}">
+                <p>
+                    GenerEAT creates recipe ideas and meal plans according to BMI and taste/macro preferences. For many
+                    people, finding meals that are both healthy and tasty can be a challenge. GenerEAT aims to use
+                    recipe and meal data to provide the best options that meet a user’s preferences and nutritional
+                    goals.
+                </p>
+                <p>
+                    This project uses a large meal dataset that includes both detailed recipes and comprehensive
+                    nutritional information. From there, users can receive auto generated meal ideas based on caloric
+                    intake and nutritional value. Users can set preferences for vegetarian, high protein, or low fat
+                    meals to further improve the results they get. The preferences also extend to taste so users can
+                    find the perfect recipes for them. GenerEAT fixes the inconvenience of manual meal planning by
+                    taking a data-based approach to what people eat.
+                </p>
             </div>
         </div>
     </div>
