@@ -3,7 +3,7 @@
 
 <head>
     <title>Money(Basket)Ball</title>
-    <link rel="icon" type="image/png" href="{{url_for('static', filename='myicon.png')}}">
+    <link rel="icon" type="image/png" href="{{url_for('static', filename='myicon.PNG')}}">
     <meta charset="utf-8" />
     <!--Bootstrap Requirements-->
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -167,7 +167,7 @@
                     averaged a loss of about $2,700. However, there was a significant amount of variance, and in the end
                     we had just over a quarter of trials post a profit.
                 </p>
-                <img class="writeup-img-unscaled" src="{{url_for('static', filename='mbbtable.png')}}">
+                <img class="writeup-img-unscaled" src="{{url_for('static', filename='mbbtable.PNG')}}">
                 <h5>Baseline Models</h5>
                 <p>
                     To get a sense of how well our models are performing, we need proper baselines. For profitability,
@@ -250,7 +250,7 @@
                 <p>
                     Results for the different models are shown in the table below:
                 </p>
-                <img class="writeup-img-unscaled" src="{{url_for('static', filename='xgbtable.png')}}">
+                <img class="writeup-img-unscaled" src="{{url_for('static', filename='xgbtable.PNG')}}">
                 <p>
                     In terms of profitability, we made $2,409.48 on the “always bet $100" strategy; by betting
                     aggressively on the favorite, this model profited $3,429.00.
@@ -309,14 +309,14 @@
                     hyperparameters (e.g. network structure, learning rate, epochs, and batch size) and obtained a test
                     accuracy of 67.68%, just lower than the XGBoost results.
                 </p>
-                <img class="writeup-img-unscaled" src="{{url_for('static', filename='xgbgraph.png')}}">
+                <img class="writeup-img-unscaled" src="{{url_for('static', filename='xgbgraph.PNG')}}">
                 <p>
                     The model was overall very chaotic and prone to overfitting. To deal with this, we introduced a
                     dropout layer with a dropout rate of 0.5 after each dense layer, which explains why training loss
                     was consistently above validation loss. By just training on 10,000 games, the neural network may not
                     have enough data to be as robust as XGBoost. The final network structure is shown below.
                 </p>
-                <img class="writeup-img-unscaled" src="{{url_for('static', filename='xgbchart.png')}}">
+                <img class="writeup-img-unscaled" src="{{url_for('static', filename='xgbchart.PNG')}}">
                 <p>
                     This model lost $5,430.99 by betting $100 every time, and lost $11,611.00 by betting aggressively on
                     the winner. This result is wildly different from the XGBoost profitability, which may suggest that a
@@ -340,7 +340,7 @@
                     We also tested adding in Breakeven Win Probability and ELO as additional features. The table below
                     shows the results of the different models:
                 </p>
-                <img class="writeup-img-unscaled" src="{{url_for('static', filename='lrtable.png')}}">
+                <img class="writeup-img-unscaled" src="{{url_for('static', filename='lrtable.PNG')}}">
                 <p>
                     As can be seen above, the model that produced the most accurate results included both the breakeven
                     win probabilities and each team’s ELO. While it doesn’t beat the Vegas prediction, this model got
@@ -357,7 +357,7 @@
                     wouldn’t remain so confident). Results are summarized in the table below, with cumulative profit
                     graphs following.
                 </p>
-                <img class="writeup-img-unscaled" src="{{url_for('static', filename='mbbresults.png')}}">
+                <img class="writeup-img-unscaled" src="{{url_for('static', filename='mbbresults.PNG')}}">
                 <p>
                     In the end, the ultimate question is whether we can consider the outcome a success. Currently, that
                     answer is no - none of our models outperformed Vegas, and even the most profitable of our models has
